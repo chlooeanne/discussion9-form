@@ -6,35 +6,43 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- Add fonts from Adobe fonts or Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
     <title>Submit Recommendations</title>
     <!-- Add a favicon -->
 </head>
 <body>
+  <header>
+    <a href = "#main" class="skip" tabindex="1">Skip to Main Content</a>
+  </header>
   <!-- Implement a skip to main! -->
-    <!-- <form action="" method="post"> Connect to formspree.io-->
+  <main id="main">
+    <form action="https://formspree.io/f/xrgnlrwg" method="post"> Connect to formspree.io
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
+        <input type="text" id="name" name="name" tabindex="2"><br><br>
 <div class="radio">
         <label>Area of Submission:</label><br>
         <!-- How can the label and button line up and be easily navigatable? -->
-  <input type="radio" id="travel" name="interest" value="travel" required>
+  <input type="radio" id="travel" name="interest" value="travel" required tabindex="3">
   <label for="travel">Travel</label><br>
-  <input type="radio" id="recipe" name="interest" value="recipe" tabindex="0">
+  <input type="radio" id="recipe" name="interest" value="recipe" tabindex="4">
   <label for="recipe">Recipe</label><br>
-  <input type="radio" id="pets" name="interest" value="pets">
+  <input type="radio" id="pets" name="interest" value="pets" tabindex="5">
   <label for="pets">Pets</label><br><br>
 </div>
 
 
         <label for="message">Message:</label>
-        <textarea id="message" name="message"></textarea><br><br>
+        <textarea id="message" name="message" tabindex="6"></textarea><br><br>
 
         <label for="image">Upload Image:</label><br>
         <input type="file" id="image" name="image"><br><br>
 
-        <input type="submit" value="Submit">
+        <input type="submit" id="submit" value="Submit" tabindex="7">
 
-        <button type="reset">Reset</button>
+        <button type="reset" id="reset" tabindex="8">Reset</button>
       </form>
+    </main>
 </body>
 </html>
